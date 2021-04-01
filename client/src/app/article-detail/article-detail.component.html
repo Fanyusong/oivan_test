@@ -1,0 +1,17 @@
+<div class="w3-row">
+
+  <!-- Blog entries -->
+  <div class="w3-col s12" *ngIf="article">
+    <!-- Blog entry -->
+    <div class="w3-card-4 w3-margin w3-white">
+      <img [src]="article.img ? article.img : 'assets/images/hacker_news.png'" style="width:100%">
+      <div class="w3-container">
+        <h3><b>{{ article.title }}</b><a [href]="article.site_link">({{ article?.site_name }})</a></h3>
+        <h5>{{ article.author }}, <span class="w3-opacity">{{ article.time }}</span>, <span class="w3-tag"> {{ article.points }} </span> </h5>
+      </div>
+      <div class="w3-container" [innerHTML]="article.desc">
+      </div>
+    </div>
+    <hr>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<nav class="w3-sidebar w3-bar-block w3-card w3-top w3-xlarge w3-animate-left"
+     style="display:none;z-index:2;width:40%;min-width:300px"
+     id="mySidebar">
+  <a href="javascript:void(0)" (click)="closeSideBar()"
+     class="w3-bar-item w3-button">Close Menu</a>
+  <a routerLink="/articles" class="w3-bar-item w3-button">Articles</a>
+</nav>
+
+<div class="w3-top" style="background: white">
+  <div class="w3-white w3-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-button w3-padding-16 w3-left" (click)="openSideBar()">☰</div>
+    <div class="w3-right w3-padding-16">Oivan</div>
+  </div>
+</div>
+
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+  <router-outlet></router-outlet>
+  <!-- Footer -->
+  <footer class="w3-row-padding w3-padding-32">
+    <div class="w3-third">
+      <p>Powered by Oivan</p>
+    </div>
+  </footer>
+</div>
+

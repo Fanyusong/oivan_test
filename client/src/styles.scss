@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+
+body, h1, h2, h3, h4, h5, h6 {
+  font-family: "Karma", sans-serif
+}
+
+.w3-bar-block .w3-bar-item {
+  padding: 20px
+}
+
+.truncate {
+  width: 800px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  @media only screen and (max-width: 600px) {
+    width: 400px;
+  }
+}
