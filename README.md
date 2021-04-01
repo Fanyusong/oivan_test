@@ -1,24 +1,23 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+**How to install and run app:**
 
-Things you may want to cover:
+Install Backend: 
+```sh
+bundle i
+```
+Install Frontend:
+```sh
+cd client && npm install
+```
 
-* Ruby version
+Run Backend:
+```sh
+rails s
 
-* System dependencies
+```
+Run Frontend:
+```sh
+cd client && ng serve
+```
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
