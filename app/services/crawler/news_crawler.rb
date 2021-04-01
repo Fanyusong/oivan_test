@@ -15,10 +15,10 @@ module Crawler
       items = raw_data.html.xpath('//table[@class="itemlist"]//tr[not(@class="spacer")]')
       return if items.length > 3 && items.length % 2 != 0
       items = items.reverse[2..-1]
-      new = {}
       trigger_data = []
       items.each_with_index do |item, index|
         next if index.odd?
+        new = {}
         new[:id] = items[index + 1].attributes["id"].value
         new[:title] = items[index + 1].children.css('.storylink').text()
         new[:site_link] = items[index + 1].children.css('.storylink')[0]["href"]
@@ -27,8 +27,8 @@ module Crawler
         new[:time] = item.children.css('.age').text()
         new[:points] = item.children.css('.score').text()
         new[:comments] = item.children.css('.subtext').children[-2].text()
-        NewsService.instance.write new.dup
-        trigger_data << new.dup
+        NewsService.instance.write new
+        trigger_data << new
       end
       trigger_crawl trigger_data
     end

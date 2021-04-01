@@ -11,7 +11,7 @@ module Crawler
 
     def exec options = {}
       begin
-        source = open(@url).read
+        source = URI.open(@url).read
       rescue StandardError => e
         puts e
         return nil
