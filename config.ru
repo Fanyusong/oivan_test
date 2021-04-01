@@ -2,8 +2,10 @@
 
 require_relative "config/environment"
 
-use Rack::Rewrite do
-  rewrite %r{^(?!.*(api|\.)).*$}, '/index.html'
+if Rails.env.production?
+  use Rack::Rewrite do
+    rewrite %r{^(?!.*(api|\.)).*$}, '/index.html'
+  end
 end
 
 run Rails.application
