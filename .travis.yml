@@ -1,5 +1,7 @@
 language: ruby
-before_script:
+cache:
+  - bundler
+before_install:
   - gem install bundler:2.2.2
 script:
   - bundle install
