@@ -21,3 +21,8 @@ Run Frontend:
 cd client && ng serve
 ```
 
+Run Backend Test:
+```sh
+rails test
+```
+
