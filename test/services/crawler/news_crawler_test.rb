@@ -12,12 +12,10 @@ module Crawler
     end
 
     test "trigger_crawl function should update data" do
-      updated_items = $news_indexing[0..2]
-      items = $news[*updated_items]
+      items = $news.slice(3).values
       Crawler::NewsCrawler.instance.trigger_crawl items
-      $news[$news_indexing[0]].assert_valid_keys(:img, :desc)
-      $news[$news_indexing[1]].assert_valid_keys(:img, :desc)
-      $news[$news_indexing[2]].assert_valid_keys(:img, :desc)
+      assert_equal true, $news[$news_indexing[0]].key?(:img)
+      assert_equal true, $news[$news_indexing[0]].key?(:desc)
     end
   end
 end
