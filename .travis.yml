@@ -2,7 +2,7 @@ language: ruby
 cache:
   - bundler
 before_script:
-  - gem install bundler --version '2.2.2'
+  - gem install bundler:2.2.2
 script:
   - bundle install
   - bundle exec rails test
